@@ -29,4 +29,13 @@ describe('Service test', () => {
 
     expect(score).to.eq(expectedTotalScore);
   });
+
+  it('should return the score if a strike is achieved', () => {
+    const input = [['X'], ['4', '5']];
+    const expectedTotalScore = 19 + 9;
+
+    const score = calculateScore(input);
+
+    expect(score).to.eq(expectedTotalScore);
+  });
 });
