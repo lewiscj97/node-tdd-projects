@@ -38,4 +38,14 @@ describe('Service test', () => {
 
     expect(score).to.eq(expectedTotalScore);
   });
+
+  it('should calculate correct score of test input', () => {
+    const input = 'X 45 4/ 32';
+    const frames = processInput(input);
+    const expected = 46;
+
+    const score = calculateScore(frames);
+
+    expect(score).to.eq(expected);
+  });
 });
