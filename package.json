@@ -1,7 +1,7 @@
 {
   "name": "tdd-projects",
   "version": "1.0.0",
-  "main": "lib/index.js",
+  "main": "lib/bowling.js",
   "scripts": {
     "test": "mocha ./test"
   },
