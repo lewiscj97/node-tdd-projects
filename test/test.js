@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const { processInput } = require('../lib/bowling');
+const { processInput, calculateFrameScore } = require('../lib/bowling');
 
 describe('Service test', () => {
 
@@ -9,5 +9,14 @@ describe('Service test', () => {
     const output = processInput(input);
 
     expect(output).to.deep.eq(expected);
+  });
+
+  it('should return the score of a frame if not a strike or spare', () => {
+    const input = ['4', '5'];
+    const expected = 9;
+
+    const score = calculateFrameScore(input);
+
+    expect(score).to.eq(expected);
   });
 });
