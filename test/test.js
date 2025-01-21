@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const { processInput, calculateFrameScore, calculateScore } = require('../lib/bowling');
+const { processInput, calculateIntegerFrameScore, calculateScore } = require('../lib/bowling');
 const {P} = require("pino");
 
 describe('Service test', () => {
@@ -16,7 +16,7 @@ describe('Service test', () => {
     const input = ['4', '5'];
     const expected = 9;
 
-    const score = calculateFrameScore(input);
+    const score = calculateIntegerFrameScore(input);
 
     expect(score).to.eq(expected);
   });
