@@ -52,7 +52,7 @@ describe('Service test', () => {
   it('should account for strikes in the final frame', () => {
     const input = '11 11 11 11 11 11 11 11 11 X43';
     const frames = processInput(input);
-    const expected = 18 + 10 + 7 + 7;
+    const expected = 18 + 10 + 7;
 
     const score = calculateScore(frames);
 
