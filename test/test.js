@@ -50,7 +50,7 @@ describe('Service test', () => {
   });
 
   it('should account for strikes in the final frame', () => {
-    const input = '11 11 11 11 11 11 11 11 11 X43'
+    const input = '11 11 11 11 11 11 11 11 11 X43';
     const frames = processInput(input);
     const expected = 18 + 10 + 7 + 7;
 
@@ -63,6 +63,16 @@ describe('Service test', () => {
     const input = '43 5/ 54 X X 24';
     const frames = processInput(input);
     const expected = 7 + 10 + 5 + 9 + 20 + 10 + 6 + 6;
+
+    const score = calculateScore(frames);
+
+    expect(score).to.eq(expected);
+  });
+
+  it('should allow 3 strikes in the final frame', () => {
+    const input = '11 11 11 11 11 11 11 11 11 XXX';
+    const frames = processInput(input);
+    const expected = 18 + 10 + 10 + 10;
 
     const score = calculateScore(frames);
 
