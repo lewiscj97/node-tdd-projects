@@ -58,4 +58,14 @@ describe('Service test', () => {
 
     expect(score).to.eq(expected);
   });
+
+  it('should account for multiple strikes in a row', () => {
+    const input = '43 5/ 54 X X 24';
+    const frames = processInput(input);
+    const expected = 7 + 10 + 5 + 9 + 20 + 10 + 6 + 6;
+
+    const score = calculateScore(frames);
+
+    expect(score).to.eq(expected);
+  });
 });
