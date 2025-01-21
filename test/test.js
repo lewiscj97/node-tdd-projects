@@ -1,11 +1,12 @@
 const expect = require('chai').expect;
-const { helloWorld } = require('../lib/index');
+const { processInput } = require('../lib/bowling');
 
 describe('Service test', () => {
 
   it('should return hello world', () => {
-    const expected = 'Hello, World!';
-    const output = helloWorld();
+    const input = 'X 45 4/ 32';
+    const expected = [['X'], [4, 5], [4, '/'], [3, 2]];
+    const output = processInput(input);
 
     expect(output).to.eq(expected);
   });
