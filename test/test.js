@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const { processInput, calculateIntegerFrameScore, calculateScore } = require('../lib/bowling');
+const { processInput, calculateFrameScore, calculateTotalScore } = require('../lib/bowling');
 const {P} = require("pino");
 
 describe('Service test', () => {
@@ -16,7 +16,7 @@ describe('Service test', () => {
     const input = ['4', '5'];
     const expected = 9;
 
-    const score = calculateIntegerFrameScore(input);
+    const score = calculateFrameScore(input);
 
     expect(score).to.eq(expected);
   });
@@ -25,7 +25,7 @@ describe('Service test', () => {
     const input = [['4', '/'], ['3', '2']];
     const expectedTotalScore = 10 + 3 + 5;
 
-    const score = calculateScore(input);
+    const score = calculateTotalScore(input);
 
     expect(score).to.eq(expectedTotalScore);
   });
@@ -34,7 +34,7 @@ describe('Service test', () => {
     const input = [['X'], ['4', '5']];
     const expectedTotalScore = 19 + 9;
 
-    const score = calculateScore(input);
+    const score = calculateTotalScore(input);
 
     expect(score).to.eq(expectedTotalScore);
   });
@@ -44,7 +44,7 @@ describe('Service test', () => {
     const frames = processInput(input);
     const expected = 46;
 
-    const score = calculateScore(frames);
+    const score = calculateTotalScore(frames);
 
     expect(score).to.eq(expected);
   });
@@ -54,7 +54,7 @@ describe('Service test', () => {
     const frames = processInput(input);
     const expected = 18 + 10 + 7;
 
-    const score = calculateScore(frames);
+    const score = calculateTotalScore(frames);
 
     expect(score).to.eq(expected);
   });
@@ -64,7 +64,7 @@ describe('Service test', () => {
     const frames = processInput(input);
     const expected = 7 + 10 + 5 + 9 + 20 + 10 + 6 + 6;
 
-    const score = calculateScore(frames);
+    const score = calculateTotalScore(frames);
 
     expect(score).to.eq(expected);
   });
@@ -74,7 +74,7 @@ describe('Service test', () => {
     const frames = processInput(input);
     const expected = 18 + 10 + 10 + 10;
 
-    const score = calculateScore(frames);
+    const score = calculateTotalScore(frames);
 
     expect(score).to.eq(expected);
   });
