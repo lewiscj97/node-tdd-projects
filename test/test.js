@@ -59,10 +59,30 @@ describe('Service test', () => {
     expect(score).to.eq(expected);
   });
 
-  it('should account for multiple strikes in a row', () => {
+  it('should account for two strikes in a row', () => {
     const input = '43 5/ 54 X X 24';
     const frames = processInput(input);
     const expected = 75;
+
+    const score = calculateTotalScore(frames);
+
+    expect(score).to.eq(expected);
+  });
+
+  it('should account for three strikes in a row', () => {
+    const input = '43 5/ 54 X X X 24';
+    const frames = processInput(input);
+    const expected = 105;
+
+    const score = calculateTotalScore(frames);
+
+    expect(score).to.eq(expected);
+  });
+
+  it('should account for four strikes in a row', () => {
+    const input = '43 5/ 54 X X X X 24';
+    const frames = processInput(input);
+    const expected = 135;
 
     const score = calculateTotalScore(frames);
 
