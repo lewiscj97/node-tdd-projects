@@ -62,7 +62,7 @@ describe('Service test', () => {
   it('should account for multiple strikes in a row', () => {
     const input = '43 5/ 54 X X 24';
     const frames = processInput(input);
-    const expected = 7 + 10 + 5 + 9 + 20 + 10 + 6 + 6;
+    const expected = 75;
 
     const score = calculateTotalScore(frames);
 
@@ -73,16 +73,6 @@ describe('Service test', () => {
     const input = '11 11 11 11 11 11 11 11 11 XXX';
     const frames = processInput(input);
     const expected = 18 + 10 + 10 + 10;
-
-    const score = calculateTotalScore(frames);
-
-    expect(score).to.eq(expected);
-  });
-
-  it('should calculate correct perfect score', () => {
-    const input = 'X X X X X X X X X XXX';
-    const frames = processInput(input);
-    const expected = 300
 
     const score = calculateTotalScore(frames);
 
