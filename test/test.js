@@ -1,12 +1,18 @@
 const expect = require('chai').expect;
-const { helloWorld } = require('../lib/index');
+const { numberToLcd } = require('../lib/index');
 
-describe('Service test', () => {
+describe('Number to LCD', () => {
+  // Going to use a matrix
+  it('should return correct value for 1', () => {
+    const input = 1;
+    const expected =
+      [
+        [' '],
+        ['|'],
+        ['|']
+      ];
 
-  it('should return hello world', () => {
-    const expected = 'Hello, World!';
-    const output = helloWorld();
-
-    expect(output).to.eq(expected);
+    const output = numberToLcd(input);
+    expect(output).to.deep.eq(expected);
   });
 });

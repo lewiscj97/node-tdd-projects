@@ -3,9 +3,17 @@
 This is a collection of Node projects and Katas built following Test-Driven Development (TDD).
 Each problem will have its own feature branch (`f-<project-name>`).
 
-## Problems
+## Number to LCD
 
-This is where the directory of problems will go, e.g.
+This branch resolves [this Kata](https://learn.madetech.com/technology/katas/number-to-lcd/).
 
-- Bowling, [f-bowling](https://github.com/lewiscj97/node-tdd-projects/tree/f-bowling)
-- Wordle, [f-wordle](https://github.com/lewiscj97/node-tdd-projects/tree/f-wordle?tab=readme-ov-file)
+### Problem statement
+
+Write a program that given a number (with arbitrary number of digits), converts it into LCD style numbers using the following format:
+
+```
+   _  _     _  _  _  _  _  
+| _| _||_||_ |_   ||_||_|  
+||_  _|  | _||_|  ||_| _|
+```  
+(each digit is 3 lines high)
