@@ -28,4 +28,17 @@ describe('Number to LCD', () => {
     const output = numberToLcd(input);
     expect(output).to.deep.eq(expected);
   });
+
+  it('should return correct value for 3', () => {
+    const input = 3;
+    const expected =
+      [
+        [' _ '],
+        [' _|'],
+        [' _|']
+      ];
+
+    const output = numberToLcd(input);
+    expect(output).to.deep.eq(expected);
+  });
 });
