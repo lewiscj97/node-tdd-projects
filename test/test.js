@@ -108,4 +108,14 @@ describe('Service test', () => {
 
     expect(score).to.eq(expected);
   });
+
+  it('should allow for perfect game', () => {
+    const input = 'X X X X X X X X X XXX';
+    const frames = processInput(input);
+    const expected = 300;
+
+    const score = calculateTotalScore(frames);
+
+    expect(score).to.eq(expected);
+  });
 });
