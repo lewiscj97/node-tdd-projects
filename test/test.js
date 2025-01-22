@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const { numberToLcd } = require('../lib/index');
+const { numberToLcdMatrix, numberToLcd } = require('../lib/index');
 
 describe('Number to LCD', () => {
   // Going to use a matrix
@@ -12,7 +12,7 @@ describe('Number to LCD', () => {
         ['|']
       ];
 
-    const output = numberToLcd(input);
+    const output = numberToLcdMatrix(input);
     expect(output).to.deep.eq(expected);
   });
 
@@ -25,7 +25,7 @@ describe('Number to LCD', () => {
         ['|_ ']
       ];
 
-    const output = numberToLcd(input);
+    const output = numberToLcdMatrix(input);
     expect(output).to.deep.eq(expected);
   });
 
@@ -38,7 +38,7 @@ describe('Number to LCD', () => {
         [' _|']
       ];
 
-    const output = numberToLcd(input);
+    const output = numberToLcdMatrix(input);
     expect(output).to.deep.eq(expected);
   });
 
@@ -51,7 +51,7 @@ describe('Number to LCD', () => {
         ['  |']
       ];
 
-    const output = numberToLcd(input);
+    const output = numberToLcdMatrix(input);
     expect(output).to.deep.eq(expected);
   });
 
@@ -64,7 +64,7 @@ describe('Number to LCD', () => {
         [' _|']
       ];
 
-    const output = numberToLcd(input);
+    const output = numberToLcdMatrix(input);
     expect(output).to.deep.eq(expected);
   });
 
@@ -77,7 +77,7 @@ describe('Number to LCD', () => {
         ['|_|']
       ];
 
-    const output = numberToLcd(input);
+    const output = numberToLcdMatrix(input);
     expect(output).to.deep.eq(expected);
   });
 
@@ -90,7 +90,7 @@ describe('Number to LCD', () => {
         ['  |']
       ];
 
-    const output = numberToLcd(input);
+    const output = numberToLcdMatrix(input);
     expect(output).to.deep.eq(expected);
   });
 
@@ -103,7 +103,7 @@ describe('Number to LCD', () => {
         ['|_|']
       ];
 
-    const output = numberToLcd(input);
+    const output = numberToLcdMatrix(input);
     expect(output).to.deep.eq(expected);
   });
 
@@ -116,19 +116,18 @@ describe('Number to LCD', () => {
         [' _|']
       ];
 
-    const output = numberToLcd(input);
+    const output = numberToLcdMatrix(input);
     expect(output).to.deep.eq(expected);
   });
 
   it('should return correct value for 123456789', () => {
     const input = 123456789;
     const expected =
-      [
-        '  _  _     _  _  _  _  _ ',
-        '| _| _||_||_ |_   ||_||_|',
-        '||_  _|  | _||_|  ||_| _|'
-      ]
+      '  _  _     _  _  _  _  _ \n' +
+      '| _| _||_||_ |_   ||_||_|\n' +
+      '||_  _|  | _||_|  ||_| _|';
+
     const output = numberToLcd(input);
-    expect(output).to.deep.eq(expected);
+    expect(output).to.eq(expected);
   });
 });
