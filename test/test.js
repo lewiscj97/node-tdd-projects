@@ -98,4 +98,14 @@ describe('Service test', () => {
 
     expect(score).to.eq(expected);
   });
+
+  it('should allow for two spares in a row', () => {
+    const input = '5/ 6/ 45';
+    const frames = processInput(input);
+    const expected = 39;
+
+    const score = calculateTotalScore(frames);
+
+    expect(score).to.eq(expected);
+  });
 });
