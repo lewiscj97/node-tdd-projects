@@ -1,11 +1,13 @@
 const expect = require('chai').expect;
-const { helloWorld } = require('../lib/index');
+const { wordle } = require('../lib/index');
 
-describe('Service test', () => {
+describe('Wordle', () => {
+  it('should return all 0s if letters do not match', () => {
+    const guess = 'child';
+    const target = 'ropes';
+    const expected = '00000';
 
-  it('should return hello world', () => {
-    const expected = 'Hello, World!';
-    const output = helloWorld();
+    const output = wordle(guess, target);
 
     expect(output).to.eq(expected);
   });
