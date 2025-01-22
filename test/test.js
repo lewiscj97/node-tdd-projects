@@ -119,4 +119,16 @@ describe('Number to LCD', () => {
     const output = numberToLcd(input);
     expect(output).to.deep.eq(expected);
   });
+
+  it('should return correct value for 123456789', () => {
+    const input = 123456789;
+    const expected =
+      [
+        '  _  _     _  _  _  _  _ ',
+        '| _| _||_||_ |_   ||_||_|',
+        '||_  _|  | _||_|  ||_| _|'
+      ]
+    const output = numberToLcd(input);
+    expect(output).to.deep.eq(expected);
+  });
 });
