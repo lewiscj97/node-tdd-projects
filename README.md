@@ -7,4 +7,4 @@ Each problem will have its own feature branch (`f-<project-name>`).
 
 This is where the directory of problems will go, e.g.
 
-- Fizzbuzz, `f-fizzbuzz`
+- Bowling, [f-bowling](https://github.com/lewiscj97/node-tdd-projects/tree/f-bowling)
