@@ -31,4 +31,24 @@ describe('Wordle', () => {
 
     expect(output).to.eq(expected);
   });
+
+  it('mix of matches and incorrect positions', () => {
+    const guess = 'charm';
+    const target = 'hairy';
+    const expected = '01120';
+
+    const output = wordle(guess, target);
+
+    expect(output).to.eq(expected);
+  });
+
+  it('returns 0 if the letter has already been accounted for', () => {
+    const guess = 'elect';
+    const target = 'reads';
+    const expected = '10000';
+
+    const output = wordle(guess, target);
+
+    expect(output).to.eq(expected);
+  });
 });
