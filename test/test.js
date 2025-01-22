@@ -21,4 +21,14 @@ describe('Wordle', () => {
 
     expect(output).to.eq(expected);
   });
+
+  it('should return 1s for correct letters in incorrect locations', () => {
+    const guess = 'chore';
+    const target = 'stair';
+    const expected = '00010';
+
+    const output = wordle(guess, target);
+
+    expect(output).to.eq(expected);
+  });
 });
