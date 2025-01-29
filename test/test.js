@@ -113,4 +113,17 @@ describe('Video store', () => {
       expect(rentalSummary.points).to.eq(1);
     });
   });
+
+  describe('Price and point calculation - Multiple movies', () => {
+    it('should return correct price and points - one of each type - 1 day each', () => {
+      const regularMovie = new MovieRental('regular movie', REGULAR_TYPE, 1);
+      const newMovie = new MovieRental('new movie', NEW_TYPE, 1);
+      const childrensMovie = new MovieRental('childrens movie', CHILDREN_TYPE, 1);
+
+      const rentalSummary = calculateRentalSummary(regularMovie, newMovie, childrensMovie);
+
+      expect(rentalSummary.price).to.eq(6.5);
+      expect(rentalSummary.points).to.eq(3);
+    });
+  })
 });
