@@ -1,12 +1,19 @@
 const expect = require('chai').expect;
 const { helloWorld } = require('../lib/index');
 
-describe('Service test', () => {
+describe('Video store', () => {
+  describe('Price and point calculation', () => {
+    it('should calculate price and points for a regular movie for 1 day', () => {
+      const movie = {
+        name: "Crazynotes",
+        type: "regular",
+        days: 1
+      }
 
-  it('should return hello world', () => {
-    const expected = 'Hello, World!';
-    const output = helloWorld();
+      const rentalSummary = calculateRentalSummary(movie);
 
-    expect(output).to.eq(expected);
+      expect(priceAndPoints.price).to.eq(2.0);
+      expect(priceAndPoints.points).to.eq(1);
+    });
   });
 });
