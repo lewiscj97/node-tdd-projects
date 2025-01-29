@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const { calculateRentalSummary } = require('../lib/index');
 const MovieRental = require('../lib/MovieRental');
-const { REGULAR_TYPE, REGULAR_MOVIE_POINTS, NEW_TYPE } = require('../lib/constants');
+const { REGULAR_TYPE, REGULAR_MOVIE_POINTS, NEW_TYPE, CHILDREN_TYPE } = require('../lib/constants');
 
 describe('Video store', () => {
   describe('Price and point calculation, single rental', () => {
