@@ -125,5 +125,27 @@ describe('Video store', () => {
       expect(rentalSummary.price).to.eq(6.5);
       expect(rentalSummary.points).to.eq(3);
     });
-  })
+
+    it('should return correct price and points - one of each type - different day each', () => {
+      const regularMovie = new MovieRental('regular movie', REGULAR_TYPE, 1);
+      const newMovie = new MovieRental('new movie', NEW_TYPE, 2);
+      const childrensMovie = new MovieRental('childrens movie', CHILDREN_TYPE, 3);
+
+      const rentalSummary = calculateRentalSummary(regularMovie, newMovie, childrensMovie);
+
+      expect(rentalSummary.price).to.eq(9.5);
+      expect(rentalSummary.points).to.eq(4);
+    });
+
+    it('should return correct price and points - given example', () => {
+      const crazynotes = new MovieRental('Crazynotes', REGULAR_TYPE, 1);
+      const teeth = new MovieRental('Teeth', REGULAR_TYPE, 2);
+      const theWeb = new MovieRental('The Web', REGULAR_TYPE, 3);
+
+      const rentalSummary = calculateRentalSummary(crazynotes, teeth, theWeb);
+
+      expect(rentalSummary.price).to.eq(7.5);
+      expect(rentalSummary.points).to.eq(3);
+    });
+  });
 });
