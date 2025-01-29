@@ -49,5 +49,14 @@ describe('Video store', () => {
       expect(rentalSummary.price).to.eq(3);
       expect(rentalSummary.points).to.eq(1);
     });
+
+    it('should calculate price and points - new release - 2 days', () => {
+      const movie = new MovieRental('new movie', NEW_TYPE, 2);
+
+      const rentalSummary = calculateRentalSummary(movie);
+
+      expect(rentalSummary.price).to.eq(6);
+      expect(rentalSummary.points).to.eq(2);
+    });
   });
 });
