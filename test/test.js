@@ -28,5 +28,18 @@ describe('Video store', () => {
       expect(rentalSummary.price).to.eq(2.0);
       expect(rentalSummary.points).to.eq(1);
     });
+
+    it('should calculate price and points - regular movie - 3 days', () => {
+      const movie = {
+        name: 'Crazynotes',
+        type: 'regular',
+        days: 3
+      }
+
+      const rentalSummary = calculateRentalSummary(movie);
+
+      expect(rentalSummary.price).to.eq(3.5);
+      expect(rentalSummary.points).to.eq(1);
+    });
   });
 });
