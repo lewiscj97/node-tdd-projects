@@ -148,4 +148,26 @@ describe('Video store', () => {
       expect(rentalSummary.points).to.eq(3);
     });
   });
+
+  describe('Create statement', () => {
+    it('should generate correct statement when passed a number of movies', () => {
+      const crazynotes = new MovieRental('Crazynotes', REGULAR_TYPE, 1);
+      const teeth = new MovieRental('Teeth', REGULAR_TYPE, 2);
+      const theWeb = new MovieRental('The Web', REGULAR_TYPE, 3);
+
+      const user = 'Customer Name';
+
+      const statement = createStatement(user, crazynotes, teeth, theWeb);
+
+      const expected =
+        'Rental Record for Customer Name\n' +
+        '  Crazynotes  £2.0\n' +
+        '  Teeth  £2.0\n' +
+        '  The Web  £3.5\n' +
+        'You owe £7.5\n' +
+        'You earned 3 frequent renter points';
+
+      expect(expected).to.eq(statement);
+    });
+  });
 });
