@@ -3,10 +3,35 @@
 This is a collection of Node projects and Katas built following Test-Driven Development (TDD).
 Each problem will have its own feature branch (`f-<project-name>`).
 
-## Problems
+## Video store
 
-This is where the directory of problems will go, e.g.
+Write a system that can build a statement, when given rentals.
 
-- Bowling, [f-bowling](https://github.com/lewiscj97/node-tdd-projects/tree/f-bowling)
-- Wordle, [f-wordle](https://github.com/lewiscj97/node-tdd-projects/tree/f-wordle?tab=readme-ov-file)
-- Number to LCD, [f-numberlcd](https://github.com/lewiscj97/node-tdd-projects/tree/f-numberlcd?tab=readme-ov-file)
+When there are 3 regular movie rentals for 1, 2 and 3 days respectively, the statement looks like:
+
+```
+Rental Record for Customer Name
+  Crazynotes  £2.0
+  Teeth  £2.0
+  The Web  £3.5
+You owe £7.5
+You earned 3 frequent renter points
+```
+
+### Regular Movies
+
+Are £2 for the first 2 days, and £1.50 for each day thereafter.
+
+You earn 1 frequent renter point no matter the length of the rental.
+
+### New Release Movies
+
+Are £3 per day.
+
+You earn 1 frequent renter point for a 1 day rental, and 2 for any rental of 2 days or more.
+
+### Childrens Movies
+
+Are £1.50 for the first 3 days, and £1.50 for each day thereafter.
+
+You earn 1 frequent renter point no matter the length of the rental.
