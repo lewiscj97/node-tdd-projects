@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const { calculateRentalSummary } = require('../lib/index');
+const { calculateRentalSummary, createStatement } = require('../lib/index');
 const MovieRental = require('../lib/MovieRental');
 const { REGULAR_TYPE, REGULAR_MOVIE_POINTS, NEW_TYPE, CHILDREN_TYPE } = require('../lib/constants');
 
