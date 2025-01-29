@@ -69,11 +69,47 @@ describe('Video store', () => {
     });
 
     it('should calculate price and points - childrens movie - 1 day', () => {
-      const movie = new MovieRental('new movie', CHILDREN_TYPE, 1);
+      const movie = new MovieRental('childrens movie', CHILDREN_TYPE, 1);
 
       const rentalSummary = calculateRentalSummary(movie);
 
       expect(rentalSummary.price).to.eq(1.5);
+      expect(rentalSummary.points).to.eq(1);
+    });
+
+    it('should calculate price and points - childrens movie - 2 days', () => {
+      const movie = new MovieRental('childrens movie', CHILDREN_TYPE, 2);
+
+      const rentalSummary = calculateRentalSummary(movie);
+
+      expect(rentalSummary.price).to.eq(1.5);
+      expect(rentalSummary.points).to.eq(1);
+    });
+
+    it('should calculate price and points - childrens movie - 3 days', () => {
+      const movie = new MovieRental('childrens movie', CHILDREN_TYPE, 3);
+
+      const rentalSummary = calculateRentalSummary(movie);
+
+      expect(rentalSummary.price).to.eq(1.5);
+      expect(rentalSummary.points).to.eq(1);
+    });
+
+    it('should calculate price and points - childrens movie - 4 days', () => {
+      const movie = new MovieRental('childrens movie', CHILDREN_TYPE, 4);
+
+      const rentalSummary = calculateRentalSummary(movie);
+
+      expect(rentalSummary.price).to.eq(3);
+      expect(rentalSummary.points).to.eq(1);
+    });
+
+    it('should calculate price and points - childrens movie - 5 days', () => {
+      const movie = new MovieRental('childrens movie', CHILDREN_TYPE, 5);
+
+      const rentalSummary = calculateRentalSummary(movie);
+
+      expect(rentalSummary.price).to.eq(4.5);
       expect(rentalSummary.points).to.eq(1);
     });
   });
