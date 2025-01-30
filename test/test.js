@@ -57,4 +57,15 @@ describe('Tennis scores', () => {
 
     expect(expected).to.eq(score);
   });
+
+  it('should give the score in tennis terms, 40 0', () => {
+    tennis.score(player1);
+    tennis.score(player1);
+    tennis.score(player1);
+
+    const expected = '40,0';
+    const score = tennis.getScore();
+
+    expect(expected).to.eq(score);
+  });
 });
