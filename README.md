@@ -1,13 +1,17 @@
 # Node TDD Projects
 
 This is a collection of Node projects and Katas built following Test-Driven Development (TDD).
-Each problem will have its own feature branch (`f-<project-name>`).
 
-## Problems
+## Roman Numerals
 
-This is where the directory of problems will go, e.g.
+Given an integer input, produce output in Roman Numeral format.
 
-- Bowling, [f-bowling](https://github.com/lewiscj97/node-tdd-projects/tree/f-bowling)
-- Wordle, [f-wordle](https://github.com/lewiscj97/node-tdd-projects/tree/f-wordle?tab=readme-ov-file)
-- Number to LCD, [f-numberlcd](https://github.com/lewiscj97/node-tdd-projects/tree/f-numberlcd?tab=readme-ov-file)
-- Video Store, [f-videostore](https://github.com/lewiscj97/node-tdd-projects/tree/f-videostore)
+Example:
+
+```
+2 => II
+
+5 => V
+
+10 => X
+```
