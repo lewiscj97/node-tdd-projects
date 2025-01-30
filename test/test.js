@@ -41,4 +41,36 @@ describe('Roman numerals', () => {
 
     expect(output).to.eq(expected);
   });
+
+  it('should return correct response for input: 6', () => {
+    const expected = 'VI';
+    const input = 6;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
+
+  it('should return correct response for input: 7', () => {
+    const expected = 'VII';
+    const input = 7;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
+
+  it('should return correct response for input: 8', () => {
+    const expected = 'VIII';
+    const input = 8;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
+
+  it('should return correct response for input: 9', () => {
+    const expected = 'IX';
+    const input = 9;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
 });
