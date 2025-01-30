@@ -9,4 +9,12 @@ describe('Roman numerals', () => {
 
     expect(output).to.eq(expected);
   });
+
+  it('should return correct response for input: 2', () => {
+    const expected = 'II';
+    const input = 2;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
 });
