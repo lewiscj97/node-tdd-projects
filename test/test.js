@@ -1,11 +1,11 @@
 const expect = require('chai').expect;
-const { helloWorld } = require('../lib/index');
+const { getRomanNumeral } = require('../lib/index');
 
-describe('Service test', () => {
-
-  it('should return hello world', () => {
-    const expected = 'Hello, World!';
-    const output = helloWorld();
+describe('Roman numerals', () => {
+  it('should return correct response for input: 1', () => {
+    const expected = 'I';
+    const input = 1;
+    const output = getRomanNumeral(input);
 
     expect(output).to.eq(expected);
   });
