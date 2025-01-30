@@ -146,4 +146,12 @@ describe('Roman numerals', () => {
 
     expect(output).to.eq(expected);
   });
+
+  it('should return correct value for 100', () => {
+    const expected = 'C';
+    const input = 100;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
 });
