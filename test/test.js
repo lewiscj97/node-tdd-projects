@@ -69,13 +69,25 @@ describe('Tennis scores', () => {
     expect(expected).to.eq(score);
   });
 
-  it('should say if player has won game', () => {
+  it('should say if player 1 has won game', () => {
     tennis.score(player1);
     tennis.score(player1);
     tennis.score(player1);
     tennis.score(player1);
 
     const expected = 'Rodger wins!';
+    const score = tennis.getScore();
+
+    expect(expected).to.eq(score);
+  });
+
+  it('should say if player 2 has won game', () => {
+    tennis.score(player2);
+    tennis.score(player2);
+    tennis.score(player2);
+    tennis.score(player2);
+
+    const expected = 'Andy wins!';
     const score = tennis.getScore();
 
     expect(expected).to.eq(score);
