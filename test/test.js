@@ -92,4 +92,19 @@ describe('Tennis scores', () => {
 
     expect(expected).to.eq(score);
   });
+
+  it('should say deuce if points are equal at 40', () => {
+    tennis.score(player1);
+    tennis.score(player1);
+    tennis.score(player1);
+
+    tennis.score(player2);
+    tennis.score(player2);
+    tennis.score(player2);
+
+    const expected = 'Deuce!';
+    const score = tennis.getScore();
+
+    expect(expected).to.eq(score);
+  });
 });
