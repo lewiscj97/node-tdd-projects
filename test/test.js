@@ -180,6 +180,42 @@ describe('Tennis scores', () => {
     expect(expected).to.eq(score);
   });
 
-  // TODO: win from deuce
+  it('Win from deuce', () => {
+    tennis.score(player1);
+    tennis.score(player1);
+    tennis.score(player1);
+
+    tennis.score(player2);
+    tennis.score(player2);
+    tennis.score(player2);
+
+    tennis.score(player1);
+    tennis.score(player1)
+
+    const expected = 'Rodger wins!';
+    const score = tennis.getScore();
+
+    expect(expected).to.eq(score);
+  });
+
+  it('Deuce, advantage, return to deuce, win', () => {
+    tennis.score(player1);
+    tennis.score(player1);
+    tennis.score(player1);
+
+    tennis.score(player2);
+    tennis.score(player2);
+    tennis.score(player2);
+
+    tennis.score(player1);
+    tennis.score(player2);
+    tennis.score(player2);
+    tennis.score(player2);
+
+    const expected = 'Andy wins!';
+    const score = tennis.getScore();
+
+    expect(expected).to.eq(score);
+  });
 
 });
