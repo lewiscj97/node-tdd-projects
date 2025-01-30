@@ -17,4 +17,12 @@ describe('Roman numerals', () => {
 
     expect(output).to.eq(expected);
   });
+
+  it('should return correct response for input: 2', () => {
+    const expected = 'III';
+    const input = 3;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
 });
