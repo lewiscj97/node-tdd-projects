@@ -107,4 +107,11 @@ describe('Tennis scores', () => {
 
     expect(expected).to.eq(score);
   });
+
+  // TODO: advantage
+
+  // TODO: return to deuce
+
+  // TODO: win from deuce
+
 });
