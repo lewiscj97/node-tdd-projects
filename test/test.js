@@ -122,4 +122,28 @@ describe('Roman numerals', () => {
 
     expect(output).to.eq(expected);
   });
+
+  it('should return correct value for 89', () => {
+    const expected = 'LXXXIX';
+    const input = 89;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
+
+  it('should return correct value for 90', () => {
+    const expected = 'XC';
+    const input = 90;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
+
+  it('should return correct value for 99', () => {
+    const expected = 'XCIX';
+    const input = 99;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
 });
