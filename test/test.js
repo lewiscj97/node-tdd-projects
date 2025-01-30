@@ -73,4 +73,12 @@ describe('Roman numerals', () => {
 
     expect(output).to.eq(expected);
   });
+
+  it('should return correct response for input: X', () => {
+    const expected = 'X';
+    const input = 10;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
 });
