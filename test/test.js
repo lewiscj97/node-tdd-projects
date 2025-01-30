@@ -18,9 +18,25 @@ describe('Roman numerals', () => {
     expect(output).to.eq(expected);
   });
 
-  it('should return correct response for input: 2', () => {
+  it('should return correct response for input: 3', () => {
     const expected = 'III';
     const input = 3;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
+
+  it('should return correct response for input: 4', () => {
+    const expected = 'IV';
+    const input = 4;
+    const output = getRomanNumeral(input);
+
+    expect(output).to.eq(expected);
+  });
+
+  it('should return correct response for input: 5', () => {
+    const expected = 'V';
+    const input = 5;
     const output = getRomanNumeral(input);
 
     expect(output).to.eq(expected);
