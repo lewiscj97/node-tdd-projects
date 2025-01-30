@@ -23,11 +23,36 @@ describe('Tennis scores', () => {
     expect(expected).to.eq(score);
   });
 
-  it('should give the score in tennis terms', () => {
+  it('should give the score in tennis terms, 15 all', () => {
     tennis.score(player1);
     tennis.score(player2);
 
     const expected = '15,15';
+    const score = tennis.getScore();
+
+    expect(expected).to.eq(score);
+  });
+
+  it('should give the score in tennis terms, 30 15', () => {
+    tennis.score(player1);
+    tennis.score(player1);
+
+    tennis.score(player2);
+
+    const expected = '30,15';
+    const score = tennis.getScore();
+
+    expect(expected).to.eq(score);
+  });
+
+  it('should give the score in tennis terms, 40 15', () => {
+    tennis.score(player1);
+    tennis.score(player1);
+    tennis.score(player1);
+
+    tennis.score(player2);
+
+    const expected = '40,15';
     const score = tennis.getScore();
 
     expect(expected).to.eq(score);
