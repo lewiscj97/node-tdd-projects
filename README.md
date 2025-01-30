@@ -12,3 +12,4 @@ This is where the directory of problems will go, e.g.
 - Number to LCD, [f-numberlcd](https://github.com/lewiscj97/node-tdd-projects/tree/f-numberlcd?tab=readme-ov-file)
 - Video Store, [f-videostore](https://github.com/lewiscj97/node-tdd-projects/tree/f-videostore)
 - Roman numerals, [f-roman-numerals](https://github.com/lewiscj97/node-tdd-projects/tree/f-roman-numerals?tab=readme-ov-file)
+- Tennis, [f-tennis](https://github.com/lewiscj97/node-tdd-projects/tree/f-tennis?tab=readme-ov-file)
